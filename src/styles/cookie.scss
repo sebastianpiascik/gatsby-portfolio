@@ -1,0 +1,47 @@
+$colorTextCookie: #fff;
+$color: #131127;
+
+.cookie-info {
+  background-color: $color;
+  border-top: 2px solid $colorTextCookie;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  display: none;
+  z-index: 999999;
+  text-align: center;
+  &__content {
+    display: inline-block;
+    width: auto;
+    font-size: 13px;
+    font-weight: 500;
+    p {
+      display: inline-block;
+      color: $colorTextCookie;
+      margin: 0 20px 0 0;
+      font-weight: 400;
+    }
+  }
+  &__button {
+    width: auto;
+    display: inline-block;
+    background-color: $color;
+    border-radius: 1px;
+    padding: 4px 5px 6px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 400;
+    border: 1px solid #fff;
+    margin: 0;
+    line-height: 13px;
+    vertical-align: middle;
+    transition: 0.3s;
+    &:hover {
+      background-color: #fff;
+      color: $color;
+    }
+  }
+}

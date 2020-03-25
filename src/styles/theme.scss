@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap&subset=latin-ext");
+
+$bcColor: #000f1c;
+// $color: #e06126;
+$color: #3785c3;
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: $bcColor;
+  color: rgba(#fff, 0.8);
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  b {
+    font-weight: 900;
+    font-size: 80px;
+  }
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+h6 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 15px;
+  position: relative;
+  padding-left: 15px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 3px;
+    height: 70%;
+    background-color: $color;
+  }
+}
+
+p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  color: rgba(#fff, 0.4);
+}
+
+a {
+  transition: 0.3s;
+  color: $color;
+  text-decoration: none !important;
+  &:hover {
+    color: #fff;
+  }
+}
+
+div {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.row {
+  margin: 0 auto;
+}
+
+.button {
+  display: inline-block;
+  width: auto;
+  border: 1px solid #fff;
+  background: transparent;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-timing-function: ease-in-out;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  color: #fff;
+  transition: 0.5s;
+  &:hover {
+    border: 1px solid $color;
+    color: $color;
+  }
+  &--color {
+    border: 1px solid $color;
+    color: $color;
+    &:hover {
+      border: 1px solid #fff;
+      color: #fff;
+    }
+  }
+  // text-transform: uppercase;
+}
+
+.header {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 0;
+  &__container {
+  }
+  &__inner {
+  }
+  &__logo {
+    img {
+      width: 40px;
+      opacity: 0.8;
+    }
+    span {
+      color: rgba(#fff, 0.8);
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      display: inline-block;
+      margin-left: 15px;
+    }
+  }
+  &__nav {
+    align-self: center;
+    ul {
+      li {
+        display: inline-block;
+        a {
+          display: block;
+          color: #000;
+          padding: 10px;
+        }
+        &.current-menu-item,
+        &:hover {
+          a {
+            color: $color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.wallpaper {
+  margin: 0;
+  position: relative;
+  align-items: center;
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba($bcColor, 0.9), $bcColor);
+  }
+  &__container {
+    height: 100vh;
+  }
+  &__inner {
+    height: 100%;
+    align-items: center;
+  }
+  &__content {
+    text-align: center;
+    h1 {
+      color: $color;
+    }
+    h3 {
+      margin: 30px 0 60px;
+    }
+  }
+}
+
+.heading {
+  margin: 150px 0 80px;
+  &__inner {
+    height: 100px;
+    align-items: center;
+    position: relative;
+  }
+  &__content {
+    width: 100%;
+    h2 {
+      position: absolute;
+      top: calc(50% - 36px);
+      left: 0;
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      color: rgba(#fff, 0.02);
+      font-size: 8vw;
+      line-height: 8vw;
+      font-weight: 900;
+      margin: 0;
+      letter-spacing: 5px;
+      white-space: nowrap;
+    }
+    h4 {
+      text-transform: uppercase;
+      color: $color;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      margin: 0;
+      padding: 0 0 0 20%;
+      width: 100%;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 10%;
+        top: calc(50% - 1px);
+        width: 6%;
+        height: 2px;
+        background-color: #fff;
+      }
+    }
+  }
+  &--right {
+    .heading__content {
+      h4 {
+        text-align: right;
+        padding: 0 20% 0 0;
+        &::before {
+          left: auto;
+          right: 10%;
+        }
+      }
+    }
+  }
+}
+
+.features {
+  margin: 40px 0;
+  &__single {
+    margin: 60px 0;
+    h6 {
+      margin: 40px 0 20px;
+    }
+    a {
+      color: $color;
+      line-height: 28px;
+      display: inline-block;
+      border-bottom: 1px solid $color;
+    }
+    &__icon {
+      img {
+        width: 80px;
+      }
+    }
+  }
+}
+
+.project {
+  margin: 150px 0;
+  &__inner {
+    align-items: center;
+  }
+  &__content {
+    text-align: right;
+    h4 {
+      font-weight: 900;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .button {
+      margin-top: 40px;
+    }
+  }
+  &__image {
+  }
+  &--right {
+    .project {
+      &__inner {
+        flex-direction: row-reverse;
+      }
+      &__content {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.about {
+  &__inner {
+    justify-content: center;
+    text-align: center;
+  }
+  &__content {
+    p {
+      padding: 0 2vw;
+      span {
+        color: $color;
+      }
+    }
+  }
+  &__icons {
+    margin-top: 50px;
+    svg {
+      width: 100px;
+      padding: 15px;
+      opacity: 0.15;
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.services {
+  &__single {
+    margin: 15px 0;
+    &__inner {
+      box-shadow: 0 0 5px rgba($color, 0.1);
+      padding: 3vw;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+      transition: 0.5s;
+      &:hover {
+        box-shadow: 0 0 10px rgba($color, 0.4);
+      }
+    }
+    &__image {
+      flex: 0 0 100px;
+      img {
+        width: 60px;
+      }
+    }
+    &__content {
+      flex: 0 0 calc(100% - 100px);
+      h4 {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.contact-info {
+  &__section {
+    text-align: center;
+    img {
+      width: 100%;
+      height: 90px;
+      object-fit: contain;
+      margin-bottom: 40px;
+    }
+    h5 {
+      font-weight: 300;
+    }
+  }
+}
+
+.copyright {
+  margin-top: 150px;
+  p {
+    text-align: center;
+    color: rgba(#fff, 0.2);
+  }
+}

@@ -1,0 +1,17 @@
+//Extra small (xs) - below 576px
+//Small (sm) - between 576px and 768px
+//Medium (md) - between 768px and 992px
+//Large (lg) - between 992px and 1200px
+//Extra Large (xl) - over 1200px
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1050px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 96%;
+  }
+}
